@@ -1,12 +1,13 @@
 //
-//  ViewController.h
+//  T8TableViewForm.h
 //  T8TableViewFormDemo
 //
 //  Created by 琦张 on 15/11/4.
 //  Copyright © 2015年 T8. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef T8TableViewForm_h
+#define T8TableViewForm_h
 
 #import "T8MenuTableViewController.h"
 #import "T8MenuSection.h"
@@ -20,7 +21,4 @@
 #import "T8MenuFunctionItem.h"
 #import "T8PlaceHolderTextView.h"
 
-@interface ViewController : T8MenuTableViewController
-
-@end
-
+#endif /* T8TableViewForm_h */
