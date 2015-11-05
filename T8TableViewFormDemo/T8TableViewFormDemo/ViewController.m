@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<T8MenuItemDelegate>
 
 @property (strong, nonatomic) T8MenuTitleItem *titleItem;
 @property (strong, nonatomic) T8MenuSwitchItem *switchItem;
@@ -21,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"TableViewFormDemo";
     
     self.titleItem = [[T8MenuTitleItem alloc] initWithTitle:@"标题" indicator:YES subTitle:@"副标题"];
     self.switchItem = [[T8MenuSwitchItem alloc] initWithTitle:@"开关" isOn:YES];
@@ -41,6 +43,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - T8MenuItemDelegate
+- (void)recieveMenuItemEvent:(NSString *)path item:(T8MenuItem *)item
+{
+    NSLog(@"path:%@, item:%@", path, [item description]);
 }
 
 @end
